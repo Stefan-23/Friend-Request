@@ -52,4 +52,21 @@
         return false;
       }
     }
+
+    //Get user by ID
+    public function findUsersByName($name){
+
+      $this->db->query('SELECT * FROM users WHERE name = :name');
+      //Bind value
+      $this->db->bind(':name', $name);
+
+      $row = $this->db->single();
+
+      //check row
+      if($this->db->rowCount() > 0){
+        return true;
+      } else {
+        return false;
+      }
+  }
   }

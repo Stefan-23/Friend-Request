@@ -9,8 +9,8 @@
         public function index(){
             
             $data = [
-                'title' => 'Welcome',
-                
+                'title' => 'Invitations App',
+                'description' => 'Welcome to invitations app. Feel free to invite anyone with you',
             ];
 
             

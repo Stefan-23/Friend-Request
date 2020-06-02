@@ -37,6 +37,11 @@
         // Validate Name
         if(empty($data['name'])){
           $data['name_err'] = 'Pleae enter name';
+        }else {
+          // Check email
+          if($this->userModel->findUsersByName($data['name'])){
+            $data['name_err'] = 'Name is already taken';
+          }
         }
 
         // Validate Password

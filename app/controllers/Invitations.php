@@ -24,8 +24,10 @@
             $this->view('invitations/index', $data);
         }
 
+        //Invitation function
         public function invite($id){
 
+            
             $users = $this->invitationModel->getUserById($id);
 
                 
@@ -37,7 +39,7 @@
                 ];
 
                 if($this->invitationModel->insertRequest($data)){
-                    flash('post_message' , 'Invite sent');
+                    flash('post_message' , 'Invitation sent');
                     redirect('invitations');
                 }
 

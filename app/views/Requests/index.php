@@ -18,7 +18,9 @@
       ?>
     <?php else : ?>
     <p class="card-text"><?php echo 'Request sent from: ' . $request->user_from; ?></p> 
-    <a href="<?php echo URLROOT; ?>requests/accept/" class="btn btn-success" >Accept</a>
+    <a href="<?php echo URLROOT; ?>requests/accept/ <?php echo $request->id; ?>" class="btn btn-success" >Accept</a>
+    <a href="<?php echo URLROOT; ?>requests/decline/ <?php echo $request->id; ?>" class="btn btn-link" >Decline</a>
+    
     
     <?php endif;?>
     </div>
